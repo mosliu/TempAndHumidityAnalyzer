@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!-- 应用名称 -->  
+    <property name="APP_Name" value="TempAndHumidityAnalyzer" />   
+    <contextName>${APP_Name}</contextName>  
+    
+    <!-- 日志输出格式 -->  
+    <property name="ENCODER_PATTERN"  
+        value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{40} - %msg%n" />  
+    <!-- 日志输出格式 -->  
+    <property name="ENCODER_PATTERN_FILE"  
+        value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%thread] %-5level %logger{80} - %msg%n" />  
+    
+    
+    <!-- 控制台输出日志 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--pattern>%d{mm:ss} %-5level %logger{36} >>> %msg%n</pattern-->
+            <Pattern>${ENCODER_PATTERN}</Pattern>  
+        </encoder>
+    </appender>
+    
+    <!--每天生成一个日志文件，保存365天的日志文件。-->
+    <appender name="DayFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>365</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <!--<pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>-->
+            <pattern>${ENCODER_PATTERN_FILE}</pattern>
+            
+        </encoder>
+    </appender>
+    
+    <!-- 错误日志：用于将错误日志输出到独立文件 -->  
+    <appender name="ERROR_FILE"  
+        class="ch.qos.logback.core.rolling.RollingFileAppender">  
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+            <fileNamePattern>logs/logErrorFile.%d{yyyy-MM-dd}.log</fileNamePattern>  
+            <maxHistory>365</maxHistory>  
+        </rollingPolicy>  
+        
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">  
+            <pattern>${ENCODER_PATTERN_FILE}</pattern>  
+        </encoder>  
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">  
+            <level>WARN</level>  
+        </filter>  
+    </appender>  
+    
+    
+    <!--指定logger name为包名或类全名 指定级别 additivity设置是否传递到root logger -->
+    <logger name="slf4j" level="ERROR" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="DayFile"/>
+    </logger>
+    <!--slf4j2包下的类在ERROR级别时候传递到root logger中-->
+    <logger name="slf4j2" level="ERROR" />
+    <!--串口-->
+    <logger name="com.serotonin.io.serial" level="error" additivity="false">
+        <appender-ref ref="STDOUT"/>        
+    </logger>
+    <!--根logger控制-->
+    <root level="WARN">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="DayFile"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </root>
+</configuration>

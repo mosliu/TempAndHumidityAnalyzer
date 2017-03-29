@@ -1,0 +1,37 @@
+[2015-09-16 16:15:07.355] [AWT-EventQueue-0] ERROR net.liuxuan.THanalyzer.utils.ConfUtils - ============read object failed:D:\Workspaces\TempAndHumidityAnalyzer\Parameters.conf
+[2015-09-16 16:32:21.052] [Thread-4] WARN  org.apache.mina.core.service.IoHandlerAdapter - EXCEPTION, please implement net.liuxuan.THanalyzer.serial.mina.T1.T1Hanler.exceptionCaught() for proper handling:
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.IllegalStateException: doDecode() can't return true when buffer is not consumed. (Hexdump: 03 57 04 19 10 10 09 0F)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:242) ~[mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.filter.logging.LoggingFilter.messageReceived(LoggingFilter.java:208) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:410) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.transport.serial.SerialSessionImpl$ReadWorker.run(SerialSessionImpl.java:232) [mina-transport-serial-2.0.7.jar:na]
+Caused by: java.lang.IllegalStateException: doDecode() can't return true when buffer is not consumed.
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:179) ~[mina-core-2.0.7.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:232) ~[mina-core-2.0.7.jar:na]
+	... 11 common frames omitted
+[2015-09-16 16:32:22.051] [Thread-4] WARN  org.apache.mina.core.service.IoHandlerAdapter - EXCEPTION, please implement net.liuxuan.THanalyzer.serial.mina.T1.T1Hanler.exceptionCaught() for proper handling:
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.IllegalStateException: doDecode() can't return true when buffer is not consumed. (Hexdump: 14 2A 10 10 09 0F 14 E4)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:242) ~[mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.filter.logging.LoggingFilter.messageReceived(LoggingFilter.java:208) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:410) [mina-core-2.0.7.jar:na]
+	at org.apache.mina.transport.serial.SerialSessionImpl$ReadWorker.run(SerialSessionImpl.java:232) [mina-transport-serial-2.0.7.jar:na]
+Caused by: java.lang.IllegalStateException: doDecode() can't return true when buffer is not consumed.
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:179) ~[mina-core-2.0.7.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:232) ~[mina-core-2.0.7.jar:na]
+	... 11 common frames omitted

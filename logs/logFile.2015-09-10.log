@@ -1,0 +1,16 @@
+[2015-09-10 11:01:43.412] [AWT-EventQueue-0] INFO  net.liuxuan.THanalyzer.THAnalyzer - Software Started 
+[2015-09-10 11:01:43.456] [AWT-EventQueue-0] DEBUG net.liuxuan.THanalyzer.utils.ConfUtils - read object success!D:\Workspaces\TempAndHumidityAnalyzer\Parameters.conf
+[2015-09-10 11:01:46.295] [AWT-EventQueue-0] INFO  net.liuxuan.THanalyzer.THAnalyzer - 开始通讯及记录
+[2015-09-10 11:01:46.385] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:47.366] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:48.367] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:49.418] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:50.369] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:51.370] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:52.370] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:53.370] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:54.370] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:55.370] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:56.320] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:57.370] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
+[2015-09-10 11:01:58.420] [Timer-1] DEBUG net.liuxuan.THanalyzer.serial.ModbusHelper - 获取数值为：[2345, 4822]
